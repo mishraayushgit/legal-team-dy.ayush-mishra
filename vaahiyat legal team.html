@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ayush Mishra kii wahiyat legal team </title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0b3d91;
+            --accent: #eebbc3;
+            --bg: #f5f6fa;
+            --text: #232946;
+            --highlight: #ffe066;
+            --danger: #d7263d;
+            --card: #fff;
+            --shadow: 0 4px 24px #0b3d9133;
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(120deg, var(--bg) 60%, #e3e6ee 100%);
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            min-height: 100vh;
+            transition: background 0.4s;
+        }
+        header {
+            background: linear-gradient(90deg, var(--primary) 80%, var(--accent) 100%);
+            color: #fff;
+            padding: 54px 0 36px 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 2.9em;
+            letter-spacing: 2px;
+            margin: 0;
+            font-weight: 700;
+            animation: fadeInDown 1.2s cubic-bezier(.21,.61,.35,1) 0.1s both;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-32px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .tagline {
+            font-size: 1.4em;
+            color: var(--highlight);
+            margin-top: 16px;
+            font-weight: 700;
+            text-shadow: 0 2px 8px #23294644;
+            animation: fadeIn 1.3s cubic-bezier(.21,.61,.35,1) 0.5s both;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0;}
+            to { opacity: 1;}
+        }
+        .motive-box {
+            max-width: 650px;
+            margin: -30px auto 34px auto;
+            background: var(--card);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 28px 34px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-left: 8px solid var(--primary);
+            font-size: 1.22em;
+            animation: fadeIn 1.2s cubic-bezier(.21,.61,.35,1) 0.7s both;
+        }
+        .motive-icon {
+            font-size: 2.3em;
+            color: var(--primary);
+            flex-shrink: 0;
+            filter: drop-shadow(0 2px 6px #eebbc344);
+        }
+        .motive-text {
+            color: var(--text);
+            font-weight: 700;
+        }
+        .motive-clarify {
+            color: var(--danger);
+            font-size: 1em;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+        .team-section {
+            max-width: 1000px;
+            margin: 44px auto 0 auto;
+            background: var(--card);
+            border-radius: 18px;
+            padding: 38px 36px 22px 36px;
+            box-shadow: var(--shadow);
+            animation: fadeIn 1.2s cubic-bezier(.21,.61,.35,1) 0.9s both;
+        }
+        .team-section h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 32px;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .member-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 28px;
+        }
+        .member {
+            background: linear-gradient(120deg, #e3e6ee 60%, #f3f6fb 100%);
+            border-radius: 12px;
+            padding: 22px 18px 16px 18px;
+            box-shadow: 0 2px 8px #eebbc344;
+            color: var(--text);
+            transition: transform 0.18s, box-shadow 0.18s;
+            border-bottom: 3px solid var(--accent);
+        }
+        .member:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 4px 24px #0b3d9144;
+            border-bottom: 3px solid var(--primary);
+        }
+        .member h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.15em;
+            color: var(--primary);
+        }
+        .member p {
+            margin: 3px 0;
+            font-size: 1em;
+        }
+        .team-note {
+            margin-top: 28px;
+            background: var(--highlight);
+            color: var(--text);
+            border-radius: 8px;
+            padding: 18px 14px;
+            font-size: 1.09em;
+            box-shadow: 0 2px 8px #eebbc344;
+            text-align: center;
+            font-weight: 600;
+        }
+        .journey-section {
+            max-width: 1000px;
+            margin: 34px auto 0 auto;
+            background: #f3f6fb;
+            border-radius: 16px;
+            padding: 30px 26px 20px 26px;
+            box-shadow: 0 2px 12px #0b3d9122;
+            font-size: 1.09em;
+            animation: fadeIn 1.2s cubic-bezier(.21,.61,.35,1) 1.1s both;
+        }
+        .journey-section h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .journey-section p {
+            margin: 8px 0;
+        }
+        .chant-section {
+            max-width: 1000px;
+            margin: 44px auto 0 auto;
+            background: var(--card);
+            border-radius: 18px;
+            padding: 38px 36px 28px 36px;
+            box-shadow: var(--shadow);
+            animation: fadeIn 1.2s cubic-bezier(.21,.61,.35,1) 1.3s both;
+        }
+        .chant-section h3 {
+            margin-top: 0;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: 600;
+            color: var(--text);
+        }
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1.5px solid var(--primary);
+            font-size: 1em;
+            padding: 12px;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #e3e6ee;
+            color: var(--text);
+            resize: vertical;
+            transition: border 0.2s;
+        }
+        textarea:focus {
+            border: 2px solid var(--accent);
+            outline: none;
+        }
+        input[type="submit"] {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.13em;
+            border: none;
+            padding: 13px 44px;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #0b3d9122;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: var(--accent);
+            color: var(--primary);
+            box-shadow: 0 4px 20px #eebbc344;
+        }
+        .note {
+            max-width: 1000px;
+            margin: 38px auto 0 auto;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 12px;
+            padding: 24px 34px;
+            font-size: 1.13em;
+            text-align: center;
+            box-shadow: 0 2px 12px #0b3d9133;
+            animation: fadeIn 1.2s cubic-bezier(.21,.61,.35,1) 1.5s both;
+        }
+        .contact {
+            text-align: center;
+            margin: 44px 0 34px 0;
+            color: var(--text);
+        }
+        .contact h3 {
+            margin-bottom: 8px;
+        }
+        .contact p {
+            margin: 3px 0;
+        }
+        @media (max-width: 700px) {
+            .motive-box, .team-section, .chant-section, .note, .journey-section {
+                padding: 15px 7px;
+            }
+            .member-list {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+    <script>
+function validateForm() {
+    var userInput = document.getElementById('chant').value.trim();
+    var requiredPhrase = "Ayush Mishra ki sena murdabaad";
+    var requiredCount = 61;
+
+    // Count occurrences of the phrase
+    var count = 0;
+    var pos = 0;
+    while (true) {
+        pos = userInput.indexOf(requiredPhrase, pos);
+        if (pos >= 0) {
+            count++;
+            pos += requiredPhrase.length;
+        } else {
+            break;
+        }
+    }
+    if (count === requiredCount) {
+        alert('धन्यवाद! आपकी रिक्वेस्ट प्राप्त हो गई है। हमारी लीगल टीम आपसे संपर्क करेगी।');
+        return true;
+    } else {
+        alert('कृपया ठीक 61 बार "ayush mishra ki sena murdabaad" लिखें।');
+        return false;
+    }
+}
+    </script>
+</head>
+<body>
+    <header>
+        <h1>ayush mishra kii wahiyat legal team</h1>
+        <div class="tagline">ayush mishra ki sena murdabaad</div>
+    </header>
+    <div class="motive-box">
+        <span class="motive-icon">⚖️</span>
+        <span class="motive-text">
+            Motive: <span style="color:var(--danger);"><strong>जिनका केस लड़ेंगे, सज़ा उन्हीं को दिलवाएँगे — सामने वाले को नहीं!</strong></span>
+            <div class="motive-clarify">
+                (हमारा उद्देश्य: न्याय की अनूठी परिभाषा!)
+            </div>
+        </span>
+    </div>
+    <section class="team-section">
+        <h2>हमारी टीम</h2>
+        <div class="member-list">
+            <div class="member">
+                <h3>Ayush Mishra</h3>
+                <p><strong>पद:</strong> Senior Legal Advisor</p>
+                <p><strong>योग्यता:</strong> M.comin LLA</p>
+                <p><strong>विशेषता:</strong> Corporate Law, Taxation, Legal Compliance</p>
+            </div>
+            <div class="member">
+                <h3>Anandmani kumar</h3>
+                <p><strong>पद:</strong> Criminal Law Expert</p>
+                <p><strong>योग्यता:</strong> M.A in LLB</p>
+                <p><strong>विशेषता:</strong> Criminal Defense, Bail Matters, Legal Research</p>
+            </div>
+            <div class="member">
+                <h3>Risabh Mishra</h3>
+                <p><strong>पद:</strong> Civil Law Specialist</p>
+                <p><strong>योग्यता:</strong> M.S in LLC</p>
+                <p><strong>विशेषता:</strong> Property Disputes, Contract Law, Family Law</p>
+            </div>
+            <div class="member">
+                <h3>Animesh</h3>
+                <p><strong>पद:</strong> Technology & Cyber Law Consultant</p>
+                <p><strong>योग्यता:</strong> M.tech in LLD</p>
+                <p><strong>विशेषता:</strong> Cyber Crimes, IT Law, Data Privacy</p>
+            </div>
+        </div>
+        <div class="team-note">
+            Bas bhaisahab case nhi aate hain, mujhe lagta hain mujhe merii legal team badi krnii hogii.<br>
+            abhi D tkk pahuch gyya hu, aage Z tkk leke jaaunga, tb shyd se case aaye.<br>
+            agr success mili toh hindi varnmal se Aa se anaar bhi chalu krr dunga.
+        </div>
+    </section>
+    <section class="journey-section">
+        <h3>हमारी यात्रा और सोच</h3>
+        <p>हमने D तक का सफर तय कर लिया है, और अब Z तक पहुँचने की तैयारी है।</p>
+        <p>मकसद: <b>जिनका केस लड़ेंगे, सज़ा उन्हीं को दिलवाएँगे — सामने वाले को नहीं!</b></p>
+        <p>अगर सफलता मिली, तो Aa से अनार भी चालू कर देंगे।</p>
+    </section>
+    <section class="chant-section">
+        <h3>फॉर्म भरें (61 बार लिखें)</h3>
+        <form onsubmit="return validateForm()">
+            <label for="chant">कृपया नीचे दिए गए वाक्य को ठीक 61 बार लिखें:</label><br>
+            <textarea id="chant" name="chant" placeholder="ayush mishra ki sena murdabaad ... 61 बार"></textarea><br>
+            <input type="submit" value="सबमिट करें">
+        </form>
+    </section>
+    <div class="note">
+        <strong>नोट:</strong>61 बार "ayush mishra ki sena murdabaad" लिखने पर, हमारी लीगल टीम आपसे संपर्क करेगी।<br>
+      
+    </div>
+    <div class="contact">
+        <h3>Contact</h3>
+        <p>ईमेल: <strong>maje aarhe hain @ gmail.com</strong></p>
+        <p>फोन: <em>phone no. kya kroge leke</em></p>
+        <p>पता: <em>gumnaam hain jgh</em></p>
+    </div>
+</body>
+</html>
+
+
+
+
+
